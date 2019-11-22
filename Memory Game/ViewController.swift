@@ -132,9 +132,9 @@ class ViewController: UIViewController {
             
             if isHighsocreBeaten(score) {
                 guard let index = currentRankings.firstIndex(where: { $0.score == currentScore }) else { return }
-                showMessage(title: "Congratulations", message: "You ranked number \(index + 1)!")
+                showMessage(title: "Congratulations", message: "Your final sore is \(currentScore) and it ranked number \(index + 1)!")
             } else {
-                showMessage(title: "Game Over", message: "You can do better!")
+                showMessage(title: "Game Over", message: "Your final score is \(currentScore). Try again to reach top 10!")
             }
             
             // Save current ranking
@@ -210,7 +210,6 @@ class ViewController: UIViewController {
             }
             
         }
-        
         // Update rank value
         for num in 0..<ranking.count{
             ranking[num].rank = num + 1
