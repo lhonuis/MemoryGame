@@ -132,7 +132,7 @@ class ViewController: UIViewController {
             
             if isHighsocreBeaten(score) {
                 guard let index = currentRankings.firstIndex(where: { $0.score == currentScore }) else { return }
-                showMessage(title: "Congratulations", message: "Your final sore is \(currentScore) and it ranked number \(index + 1)!")
+                showMessage(title: "Congratulations", message: "Your final score is \(currentScore) and it ranked number \(index + 1)!")
             } else {
                 showMessage(title: "Game Over", message: "Your final score is \(currentScore). Try again to reach top 10!")
             }

@@ -19,7 +19,7 @@ class RankingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.9594124572, green: 0.9019607843, blue: 0.9020226884, alpha: 1)
         view.backgroundColor = #colorLiteral(red: 0.9999378324, green: 0.897490561, blue: 0.8938757777, alpha: 1)
         self.tableView.backgroundView?.backgroundColor = #colorLiteral(red: 1, green: 0.8991835526, blue: 0.8941713354, alpha: 1)
         
