@@ -40,21 +40,17 @@ class CardCollectionViewCell: UICollectionViewCell {
         
         // Determine whether the card is flipped up or flipped down
         if card.isFlipped {
-            
             UIView.transition(from: backImageView, to: frontImageView, duration: 0, options: [.transitionFlipFromLeft, .showHideTransitionViews], completion: nil)
         } else {
-            
             UIView.transition(from: frontImageView, to: backImageView, duration: 0, options: [.transitionFlipFromRight, .showHideTransitionViews], completion: nil)
         }
     }
     
     func flip() {
-        
         UIView.transition(from: backImageView, to: frontImageView, duration: 0.3, options: [.transitionFlipFromLeft, .showHideTransitionViews], completion: nil)
     }
     
     func flipBack() {
-        
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
             
             UIView.transition(from: self.frontImageView, to: self.backImageView, duration: 0.3, options: [.transitionFlipFromRight, .showHideTransitionViews], completion: nil)
@@ -63,7 +59,6 @@ class CardCollectionViewCell: UICollectionViewCell {
     }
     
     func removeMatchedPairs() {
-        
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
             
             UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut, animations: {

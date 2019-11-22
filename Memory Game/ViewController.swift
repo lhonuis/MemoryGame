@@ -154,6 +154,7 @@ class ViewController: UIViewController {
                 highscoreButton.setTitle("Highest: \(highestScore)", for: .normal)
             }
         } else {
+            // Current score is higher than highest score
             if currentScore > currentRankings[0].score {
                 highestScore = currentScore
                 highscoreButton.setTitle("Highest: \(highestScore)", for: .normal)
@@ -220,7 +221,6 @@ class ViewController: UIViewController {
     
     func saveCurrentRanking() {
         let encodedData = try? JSONEncoder().encode(currentRankings)
-        //        let encodedData = try? JSONEncoder().encode(sortedRankings)
         userDefaults.set(encodedData, forKey: "SavedRankings")
     }
     
@@ -373,7 +373,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
             if firstFlippedCardIndex == nil {
                 firstFlippedCardIndex = indexPath
             } else {
-                // Perform the matching logic
+
                 checkIfCardMatches(indexPath)
             }
         }

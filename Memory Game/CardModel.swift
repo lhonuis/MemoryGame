@@ -22,8 +22,6 @@ class CardModel {
             
             if numArray.contains(Int(randNum)) == false {
                 
-                print("LOG/ \(randNum)")
-                
                 // Make sure the number is going to be repeated
                 numArray.append(Int(randNum))
                 
@@ -37,7 +35,6 @@ class CardModel {
             }
         }
         
-        // TODO: - Add .shuffled()
-        return cardArray
+        return cardArray.shuffled()
     }
 }

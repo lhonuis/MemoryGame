@@ -32,7 +32,6 @@ class RankingViewController: UIViewController {
     }
     
     func loadRanking() {
-        
         if let savedData = userDefaults.data(forKey: "SavedRankings") {
             let decoder = JSONDecoder()
             do {
